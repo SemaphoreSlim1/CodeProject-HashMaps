@@ -1,0 +1,30 @@
+﻿@model HashMaps.Controllers.HomeController.DisplayModel
+
+@{
+    ViewBag.Title = "HashMaps - Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts{
+    <script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
+    @Scripts.Render("~/bundles/Home/Display");
+}
+
+@section styles{
+    @Styles.Render("~/styles/Home/Display");
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>Follow #AvaTS14!</h2>
+    </div>
+    <div class="col-md-4">
+        <h2 id="loading-placeholder">Loading data...</h2>
+    </div>
+</div>
+
+<div id="mapDiv">
+    Locating you...
+</div>
+<h1>Don't see your Yam? Add your home town in Yammer!</h1>
+
